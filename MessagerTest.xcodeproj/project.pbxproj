@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E278F2052562D02600C589F6 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278F2042562D02600C589F6 /* StatusCode.swift */; };
 		E2D732AD2561F910007F8F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732AC2561F910007F8F45 /* AppDelegate.swift */; };
 		E2D732AF2561F910007F8F45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732AE2561F910007F8F45 /* SceneDelegate.swift */; };
 		E2D732B12561F910007F8F45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732B02561F910007F8F45 /* ViewController.swift */; };
 		E2D732B42561F910007F8F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D732B22561F910007F8F45 /* Main.storyboard */; };
 		E2D732B62561F911007F8F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D732B52561F911007F8F45 /* Assets.xcassets */; };
 		E2D732B92561F911007F8F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D732B72561F911007F8F45 /* LaunchScreen.storyboard */; };
+		E2D732C72561F989007F8F45 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732C62561F989007F8F45 /* ApiService.swift */; };
+		E2D732CB2561F9CC007F8F45 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CA2561F9CC007F8F45 /* Message.swift */; };
+		E2D732CE2561FB1C007F8F45 /* DecodedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */; };
+		E2D732D12561FB79007F8F45 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732D02561FB79007F8F45 /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E278F2042562D02600C589F6 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		E2D732A92561F910007F8F45 /* MessagerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D732AC2561F910007F8F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D732AE2561F910007F8F45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		E2D732B52561F911007F8F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2D732B82561F911007F8F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2D732BA2561F911007F8F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D732C62561F989007F8F45 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		E2D732CA2561F9CC007F8F45 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedArray.swift; sourceTree = "<group>"; };
+		E2D732D02561FB79007F8F45 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		E2D732AB2561F910007F8F45 /* MessagerTest */ = {
 			isa = PBXGroup;
 			children = (
+				E2D732C12561F929007F8F45 /* Model */,
+				E2D732C22561F933007F8F45 /* View */,
+				E2D732C32561F939007F8F45 /* ViewModel */,
+				E2D732C42561F940007F8F45 /* Controller */,
+				E2D732C52561F947007F8F45 /* Networking */,
 				E2D732AC2561F910007F8F45 /* AppDelegate.swift */,
 				E2D732AE2561F910007F8F45 /* SceneDelegate.swift */,
-				E2D732B02561F910007F8F45 /* ViewController.swift */,
-				E2D732B22561F910007F8F45 /* Main.storyboard */,
 				E2D732B52561F911007F8F45 /* Assets.xcassets */,
-				E2D732B72561F911007F8F45 /* LaunchScreen.storyboard */,
 				E2D732BA2561F911007F8F45 /* Info.plist */,
 			);
 			path = MessagerTest;
+			sourceTree = "<group>";
+		};
+		E2D732C12561F929007F8F45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2D732CA2561F9CC007F8F45 /* Message.swift */,
+				E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */,
+				E278F2042562D02600C589F6 /* StatusCode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2D732C22561F933007F8F45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2D732B72561F911007F8F45 /* LaunchScreen.storyboard */,
+				E2D732B22561F910007F8F45 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2D732C32561F939007F8F45 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2D732D02561FB79007F8F45 /* MessageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E2D732C42561F940007F8F45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2D732B02561F910007F8F45 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2D732C52561F947007F8F45 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E2D732C62561F989007F8F45 /* ApiService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2D732B12561F910007F8F45 /* ViewController.swift in Sources */,
+				E2D732CE2561FB1C007F8F45 /* DecodedArray.swift in Sources */,
+				E278F2052562D02600C589F6 /* StatusCode.swift in Sources */,
 				E2D732AD2561F910007F8F45 /* AppDelegate.swift in Sources */,
+				E2D732CB2561F9CC007F8F45 /* Message.swift in Sources */,
+				E2D732D12561FB79007F8F45 /* MessageViewModel.swift in Sources */,
+				E2D732C72561F989007F8F45 /* ApiService.swift in Sources */,
 				E2D732AF2561F910007F8F45 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
