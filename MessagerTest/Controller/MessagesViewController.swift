@@ -22,7 +22,14 @@ class MessagesViewController: UIViewController {
         messagesTableView.delegate = self
         searchBar.delegate = self
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addTapped))
+        let barButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addTapped))
+        barButton.tintColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+        navigationItem.rightBarButtonItem = barButton
+        
+        searchBar.backgroundImage = UIImage()
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.backgroundColor = #colorLiteral(red: 0.9971526265, green: 0.9834153056, blue: 0.9434879422, alpha: 1)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +99,7 @@ extension MessagesViewController {
         case "toCreateMessage":
             let backItem = UIBarButtonItem()
             backItem.title = "Cancel"
-            backItem.tintColor = UIColor.systemRed
+            backItem.tintColor = #colorLiteral(red: 0.3494816422, green: 0.3450542688, blue: 0.3407886624, alpha: 1)
             navigationItem.backBarButtonItem = backItem
             break
             

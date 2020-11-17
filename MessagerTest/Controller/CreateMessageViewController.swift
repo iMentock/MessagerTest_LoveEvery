@@ -22,7 +22,11 @@ class CreateMessageViewController: UIViewController {
         messageBodyTextView.delegate = self
         
         let sendButton = UIBarButtonItem(title: "Send", style: .done, target: self, action: #selector(sendButtonPressed))
+        sendButton.tintColor = #colorLiteral(red: 0.3494816422, green: 0.3450542688, blue: 0.3407886624, alpha: 1)
         navigationItem.rightBarButtonItem = sendButton
+        
+        usernameTextField.borderStyle = .none
+        subjectTextField.borderStyle = .none
     }
     
     @objc func sendButtonPressed() {
