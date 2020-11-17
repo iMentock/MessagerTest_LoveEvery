@@ -10,7 +10,8 @@
 		E222DB7B25630BCF00EF7770 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222DB7A25630BCF00EF7770 /* MessageDetailViewController.swift */; };
 		E222DB7E2563170800EF7770 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222DB7D2563170800EF7770 /* CreateMessageViewController.swift */; };
 		E26CA0F22562FA0B007F565A /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26CA0F12562FA0B007F565A /* MessageTableViewCell.swift */; };
-		E278F2052562D02600C589F6 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278F2042562D02600C589F6 /* StatusCode.swift */; };
+		E2B4BEF825648E9900D50453 /* MessagerTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4BEF725648E9900D50453 /* MessagerTestTests.swift */; };
+		E2B4BF032564931900D50453 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4BF022564931900D50453 /* ErrorHandler.swift */; };
 		E2D732AD2561F910007F8F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732AC2561F910007F8F45 /* AppDelegate.swift */; };
 		E2D732AF2561F910007F8F45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732AE2561F910007F8F45 /* SceneDelegate.swift */; };
 		E2D732B12561F910007F8F45 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732B02561F910007F8F45 /* MessagesViewController.swift */; };
@@ -18,16 +19,29 @@
 		E2D732B62561F911007F8F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D732B52561F911007F8F45 /* Assets.xcassets */; };
 		E2D732B92561F911007F8F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D732B72561F911007F8F45 /* LaunchScreen.storyboard */; };
 		E2D732C72561F989007F8F45 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732C62561F989007F8F45 /* ApiService.swift */; };
-		E2D732CB2561F9CC007F8F45 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CA2561F9CC007F8F45 /* Message.swift */; };
-		E2D732CE2561FB1C007F8F45 /* DecodedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */; };
+		E2D732CB2561F9CC007F8F45 /* AllMessagesChildMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CA2561F9CC007F8F45 /* AllMessagesChildMessage.swift */; };
+		E2D732CE2561FB1C007F8F45 /* AllMessagesParentBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CD2561FB1C007F8F45 /* AllMessagesParentBody.swift */; };
 		E2D732D12561FB79007F8F45 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732D02561FB79007F8F45 /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2B4BEFA25648E9900D50453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D732A12561F910007F8F45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2D732A82561F910007F8F45;
+			remoteInfo = MessagerTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E222DB7A25630BCF00EF7770 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		E222DB7D2563170800EF7770 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
 		E26CA0F12562FA0B007F565A /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		E278F2042562D02600C589F6 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		E2B4BEF525648E9900D50453 /* MessagerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessagerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B4BEF725648E9900D50453 /* MessagerTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerTestTests.swift; sourceTree = "<group>"; };
+		E2B4BEF925648E9900D50453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B4BF022564931900D50453 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		E2D732A92561F910007F8F45 /* MessagerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D732AC2561F910007F8F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D732AE2561F910007F8F45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,12 +51,19 @@
 		E2D732B82561F911007F8F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2D732BA2561F911007F8F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2D732C62561F989007F8F45 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		E2D732CA2561F9CC007F8F45 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedArray.swift; sourceTree = "<group>"; };
+		E2D732CA2561F9CC007F8F45 /* AllMessagesChildMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMessagesChildMessage.swift; sourceTree = "<group>"; };
+		E2D732CD2561FB1C007F8F45 /* AllMessagesParentBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMessagesParentBody.swift; sourceTree = "<group>"; };
 		E2D732D02561FB79007F8F45 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E2B4BEF225648E9900D50453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2D732A62561F910007F8F45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +74,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2B4BEF625648E9900D50453 /* MessagerTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2B4BEF725648E9900D50453 /* MessagerTestTests.swift */,
+				E2B4BEF925648E9900D50453 /* Info.plist */,
+			);
+			path = MessagerTestTests;
+			sourceTree = "<group>";
+		};
+		E2B4BF012564930700D50453 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E2B4BF022564931900D50453 /* ErrorHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E2D732A02561F910007F8F45 = {
 			isa = PBXGroup;
 			children = (
 				E2D732AB2561F910007F8F45 /* MessagerTest */,
+				E2B4BEF625648E9900D50453 /* MessagerTestTests */,
 				E2D732AA2561F910007F8F45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				E2D732A92561F910007F8F45 /* MessagerTest.app */,
+				E2B4BEF525648E9900D50453 /* MessagerTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +117,7 @@
 				E2D732C32561F939007F8F45 /* ViewModel */,
 				E2D732C42561F940007F8F45 /* Controller */,
 				E2D732C52561F947007F8F45 /* Networking */,
+				E2B4BF012564930700D50453 /* Utils */,
 				E2D732AC2561F910007F8F45 /* AppDelegate.swift */,
 				E2D732AE2561F910007F8F45 /* SceneDelegate.swift */,
 				E2D732B52561F911007F8F45 /* Assets.xcassets */,
@@ -88,9 +129,8 @@
 		E2D732C12561F929007F8F45 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E2D732CA2561F9CC007F8F45 /* Message.swift */,
-				E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */,
-				E278F2042562D02600C589F6 /* StatusCode.swift */,
+				E2D732CA2561F9CC007F8F45 /* AllMessagesChildMessage.swift */,
+				E2D732CD2561FB1C007F8F45 /* AllMessagesParentBody.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +174,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E2B4BEF425648E9900D50453 /* MessagerTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2B4BEFC25648E9900D50453 /* Build configuration list for PBXNativeTarget "MessagerTestTests" */;
+			buildPhases = (
+				E2B4BEF125648E9900D50453 /* Sources */,
+				E2B4BEF225648E9900D50453 /* Frameworks */,
+				E2B4BEF325648E9900D50453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2B4BEFB25648E9900D50453 /* PBXTargetDependency */,
+			);
+			name = MessagerTestTests;
+			productName = MessagerTestTests;
+			productReference = E2B4BEF525648E9900D50453 /* MessagerTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E2D732A82561F910007F8F45 /* MessagerTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2D732BD2561F911007F8F45 /* Build configuration list for PBXNativeTarget "MessagerTest" */;
@@ -160,6 +218,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					E2B4BEF425648E9900D50453 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = E2D732A82561F910007F8F45;
+					};
 					E2D732A82561F910007F8F45 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -179,11 +241,19 @@
 			projectRoot = "";
 			targets = (
 				E2D732A82561F910007F8F45 /* MessagerTest */,
+				E2B4BEF425648E9900D50453 /* MessagerTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E2B4BEF325648E9900D50453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2D732A72561F910007F8F45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,16 +267,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E2B4BEF125648E9900D50453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B4BEF825648E9900D50453 /* MessagerTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2D732A52561F910007F8F45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E2D732B12561F910007F8F45 /* MessagesViewController.swift in Sources */,
-				E2D732CE2561FB1C007F8F45 /* DecodedArray.swift in Sources */,
+				E2D732CE2561FB1C007F8F45 /* AllMessagesParentBody.swift in Sources */,
 				E26CA0F22562FA0B007F565A /* MessageTableViewCell.swift in Sources */,
-				E278F2052562D02600C589F6 /* StatusCode.swift in Sources */,
 				E2D732AD2561F910007F8F45 /* AppDelegate.swift in Sources */,
-				E2D732CB2561F9CC007F8F45 /* Message.swift in Sources */,
+				E2B4BF032564931900D50453 /* ErrorHandler.swift in Sources */,
+				E2D732CB2561F9CC007F8F45 /* AllMessagesChildMessage.swift in Sources */,
 				E2D732D12561FB79007F8F45 /* MessageViewModel.swift in Sources */,
 				E222DB7B25630BCF00EF7770 /* MessageDetailViewController.swift in Sources */,
 				E2D732C72561F989007F8F45 /* ApiService.swift in Sources */,
@@ -216,6 +294,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2B4BEFB25648E9900D50453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2D732A82561F910007F8F45 /* MessagerTest */;
+			targetProxy = E2B4BEFA25648E9900D50453 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E2D732B22561F910007F8F45 /* Main.storyboard */ = {
@@ -237,6 +323,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E2B4BEFD25648E9900D50453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RN2EQC2QM5;
+				INFOPLIST_FILE = MessagerTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MindSlayerStudios.MessagerTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MessagerTest.app/MessagerTest";
+			};
+			name = Debug;
+		};
+		E2B4BEFE25648E9900D50453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RN2EQC2QM5;
+				INFOPLIST_FILE = MessagerTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MindSlayerStudios.MessagerTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MessagerTest.app/MessagerTest";
+			};
+			name = Release;
+		};
 		E2D732BB2561F911007F8F45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,6 +520,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E2B4BEFC25648E9900D50453 /* Build configuration list for PBXNativeTarget "MessagerTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2B4BEFD25648E9900D50453 /* Debug */,
+				E2B4BEFE25648E9900D50453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E2D732A42561F910007F8F45 /* Build configuration list for PBXProject "MessagerTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

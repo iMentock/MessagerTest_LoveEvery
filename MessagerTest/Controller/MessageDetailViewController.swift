@@ -11,20 +11,28 @@ import UIKit
 
 class MessageDetailViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var messageBodyTextView: UITextView!
     
+    // MARK: Instantiate
     var message: Message?
     
+    // MARK: Lifecycle
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         configureUI()
     }
     
+    // MARK: Helpers
+    
+    /*
+     
+     Prepare the screen with passed in Message data
+     
+     */
     private func configureUI() {
         if let message = message {
             usernameLabel.text = message.username
