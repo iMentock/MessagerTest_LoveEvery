@@ -23,5 +23,4 @@ class MessageTableViewCell: UITableViewCell {
         self.username.text = username
     }
     
-
 }

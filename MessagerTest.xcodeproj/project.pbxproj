@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E222DB7B25630BCF00EF7770 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222DB7A25630BCF00EF7770 /* MessageDetailViewController.swift */; };
+		E222DB7E2563170800EF7770 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222DB7D2563170800EF7770 /* CreateMessageViewController.swift */; };
 		E26CA0F22562FA0B007F565A /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26CA0F12562FA0B007F565A /* MessageTableViewCell.swift */; };
 		E278F2052562D02600C589F6 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278F2042562D02600C589F6 /* StatusCode.swift */; };
 		E2D732AD2561F910007F8F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732AC2561F910007F8F45 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		E222DB7A25630BCF00EF7770 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
+		E222DB7D2563170800EF7770 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
 		E26CA0F12562FA0B007F565A /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		E278F2042562D02600C589F6 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		E2D732A92561F910007F8F45 /* MessagerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 			children = (
 				E2D732B02561F910007F8F45 /* MessagesViewController.swift */,
 				E222DB7A25630BCF00EF7770 /* MessageDetailViewController.swift */,
+				E222DB7D2563170800EF7770 /* CreateMessageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				E2D732D12561FB79007F8F45 /* MessageViewModel.swift in Sources */,
 				E222DB7B25630BCF00EF7770 /* MessageDetailViewController.swift in Sources */,
 				E2D732C72561F989007F8F45 /* ApiService.swift in Sources */,
+				E222DB7E2563170800EF7770 /* CreateMessageViewController.swift in Sources */,
 				E2D732AF2561F910007F8F45 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

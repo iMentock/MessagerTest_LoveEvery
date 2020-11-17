@@ -10,34 +10,42 @@ import UIKit
 class MessagesViewController: UIViewController {
 
     @IBOutlet weak var messagesTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     private var viewModel = MessageViewModel()
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        messagesTableView.dataSource = self
+        messagesTableView.delegate = self
+        searchBar.delegate = self
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addTapped))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadAllMessagesData()
+    }
+    
+    @objc func addTapped() {
+        self.performSegue(withIdentifier: "toCreateMessage", sender: self)
     }
 
     private func loadAllMessagesData() {
-        
-        viewModel.fetchMessagesData{ [weak self] in
-            print("[DEBUG] Finished fetching data")
-            self?.messagesTableView.dataSource = self
-            self?.messagesTableView.delegate = self
+        viewModel.getAllMessagesData { [weak self] in
             self?.messagesTableView.reloadData()
         }
-        
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indexPaths = self.messagesTableView!.indexPathsForSelectedRows!
-        let indexPath = indexPaths[0] as IndexPath
-        let vc = segue.destination as! MessageDetailViewController
-        vc.message = viewModel.cellForRowAt(indexPath: indexPath).first
+    
+    private func loadMessageData(forUser: String) {
+        viewModel.getAllMessagesData(forUser: forUser) { [weak self] in
+            self?.messagesTableView.reloadData()
+        }
     }
+    
 }
 
 // MARK: - TableView
@@ -52,7 +60,7 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
         
         let message = viewModel.cellForRowAt(indexPath: indexPath)
         
-        cell.setCellWithValuesOf(message.first!)
+        cell.setCellWithValuesOf(message)
         
         return cell
     }
@@ -62,3 +70,48 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - Search Bar
+extension MessagesViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("Search pressed....")
+        
+        // TODO: move into view model
+        let apiService = ApiService()
+        
+        guard let searchBarText = searchBar.text else { return }
+        
+        loadMessageData(forUser: searchBarText)
+    }
+}
+
+// MARK: - Segue
+extension MessagesViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        
+        case "toCreateMessage":
+            let backItem = UIBarButtonItem()
+            backItem.title = "Cancel"
+            backItem.tintColor = UIColor.systemRed
+            navigationItem.backBarButtonItem = backItem
+            break
+            
+        case "toMessageView":
+            let indexPaths = self.messagesTableView!.indexPathsForSelectedRows!
+            let indexPath = indexPaths[0] as IndexPath
+            let vc = segue.destination as! MessageDetailViewController
+            vc.message = viewModel.cellForRowAt(indexPath: indexPath)
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Messages"
+            backItem.tintColor = UIColor.systemBlue
+            navigationItem.backBarButtonItem = backItem
+            
+            break
+            
+        default:
+            break
+        }
+        
+    }
+}
