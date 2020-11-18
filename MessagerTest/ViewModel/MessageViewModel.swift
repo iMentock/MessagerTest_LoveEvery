@@ -10,13 +10,14 @@ import Foundation
 class MessageViewModel {
     
     // MARK: Instantiate
-    private var apiService = ApiService() // Dependency
+    private var apiService = ApiService()
     private var messages = [Message]()
     
     // MARK: Helpers
     func getAllMessagesData(completion: @escaping (Error?) -> ()) {
         
         apiService.getAllMessages { [weak self] (result) in
+            
             switch result {
             
             case .success(let listOf):
@@ -30,6 +31,7 @@ class MessageViewModel {
                 break
                 
             }
+            
         }
         
     }
@@ -37,15 +39,20 @@ class MessageViewModel {
     func getAllMessagesData(forUser: String, completion: @escaping (Error?) -> ()) {
         
         apiService.getMessagesForUser(forUser) { [weak self] (result) in
+            
             switch result {
             
             case .success(let listOf):
                 var tempArray = [Message]()
+                
                 // O(n) - kinda ugly but does keep data as one type [Message]
                 for element in listOf {
+                    
                     let newMessage = Message(subject: element.subject, message: element.message, username: forUser)
                     tempArray.append(newMessage)
+                    
                 }
+                
                 self?.messages = tempArray
                 completion(nil)
                 break
@@ -55,6 +62,7 @@ class MessageViewModel {
                 break
                 
             }
+            
         }
         
     }
@@ -62,6 +70,7 @@ class MessageViewModel {
     func send(message:Message, completion: @escaping(Error?) -> ()) {
         
         apiService.sendMessage(message) { [weak self] (result) in
+            
             switch result {
             
             case .success(_):
@@ -73,20 +82,26 @@ class MessageViewModel {
                 break
             
             }
+            
         }
         
     }
     
     
     func numberOfRowsInSection(section: Int) -> Int {
+        
         if messages.count != 0 {
             return messages.count
         }
+        
         return 0
+        
     }
     
     func cellForRowAt(indexPath: IndexPath) ->  Message {
+        
         return messages[indexPath.row]
+        
     }
  
 }

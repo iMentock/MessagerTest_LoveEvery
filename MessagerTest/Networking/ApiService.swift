@@ -12,6 +12,11 @@ class ApiService {
     private var dataTask: URLSessionDataTask?
     var tempKeys: DecodedArray?
     
+    /**
+     Gets all messages from the AWS service with no filter for user
+     
+     - Parameter closure: Result <DecodedArray, Error>
+     */
     func getAllMessages(completion: @escaping (Result<DecodedArray, Error>) -> Void) {
 
         let messagesURL = "https://abraxvasbh.execute-api.us-east-2.amazonaws.com/proto/messages"
@@ -45,22 +50,34 @@ class ApiService {
             }
             
             do {
+                
                 // Parse data
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(Body.self, from: data)
                 
                 DispatchQueue.main.async {
+                    
                     completion(.success(jsonData.body))
+                    
                 }
+                
             } catch let error {
                 completion(.failure(error))
             }
         }
         
         dataTask?.resume()
+        
     }
     
+    /**
+     Sends a message to the AWS service and returns completion status
+     
+     - Parameter message: The Message to send
+     - Parameter closure: Result <Any, Error>
+     */
     func sendMessage(_ message: Message, completion: @escaping (Result<Any, Error>) -> Void) {
+        
         print("[INFO] Starting sendMessage()")
         
         let url = "https://abraxvasbh.execute-api.us-east-2.amazonaws.com/proto/messages"
@@ -108,21 +125,33 @@ class ApiService {
             print("[INFO] Response status code: \(response.statusCode)")
             
             do {
+                
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
                 
                 DispatchQueue.main.async {
+                    
                     completion(.success(json))
+                    
                 }
+                
             } catch {
                 completion(.failure(error))
             }
             
             
         }.resume()
+        
     }
     
+    /**
+     Gets all messages from the AWS service for a given user.
+     
+     - Parameter user: The desired user to filter by, given by username.
+     - Parameter closure: Result <DecodedArray, Error>
+     */
     func getMessagesForUser(_ user: String, completion: @escaping (Result<[UserSearchMessage], Error>) -> Void) {
+        
         let messagesURL = "https://abraxvasbh.execute-api.us-east-2.amazonaws.com/proto/messages/\(user)"
         
         guard let url = URL(string: messagesURL) else { return }
@@ -154,13 +183,17 @@ class ApiService {
             }
             
             do {
+                
                 // Parse data
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(UserMessageBody.self, from: data)
 
                 DispatchQueue.main.async {
+                    
                     completion(.success(jsonData.body.message))
+                    
                 }
+                
             } catch let error {
                 completion(.failure(error))
             }

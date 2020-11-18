@@ -21,23 +21,21 @@ class MessageDetailViewController: UIViewController {
     
     // MARK: Lifecycle
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         configureUI()
+        
     }
     
     // MARK: Helpers
-    
-    /*
-     
-     Prepare the screen with passed in Message data
-     
-     */
     private func configureUI() {
+        
         if let message = message {
             usernameLabel.text = message.username
             subjectLabel.text = message.subject
             messageBodyTextView.text = message.message
         }
+        
     }
 }

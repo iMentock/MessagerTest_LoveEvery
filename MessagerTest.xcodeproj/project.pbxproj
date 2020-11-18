@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		E222DB7B25630BCF00EF7770 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222DB7A25630BCF00EF7770 /* MessageDetailViewController.swift */; };
 		E222DB7E2563170800EF7770 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222DB7D2563170800EF7770 /* CreateMessageViewController.swift */; };
+		E22E05262565836E0060CEC0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E05252565836E0060CEC0 /* Message.swift */; };
+		E22E052A2565854A0060CEC0 /* UserSearchMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E05292565854A0060CEC0 /* UserSearchMessage.swift */; };
+		E22E052E256586E30060CEC0 /* AllMessagesResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E052D256586E30060CEC0 /* AllMessagesResponseBody.swift */; };
+		E22E0532256587B50060CEC0 /* UserSearchMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E0531256587B50060CEC0 /* UserSearchMessageBody.swift */; };
+		E22E053A2565883D0060CEC0 /* DecodedUserMessageArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E05392565883D0060CEC0 /* DecodedUserMessageArray.swift */; };
 		E26CA0F22562FA0B007F565A /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26CA0F12562FA0B007F565A /* MessageTableViewCell.swift */; };
 		E2B4BEF825648E9900D50453 /* MessagerTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4BEF725648E9900D50453 /* MessagerTestTests.swift */; };
 		E2B4BF032564931900D50453 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4BF022564931900D50453 /* ErrorHandler.swift */; };
@@ -19,8 +24,7 @@
 		E2D732B62561F911007F8F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D732B52561F911007F8F45 /* Assets.xcassets */; };
 		E2D732B92561F911007F8F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D732B72561F911007F8F45 /* LaunchScreen.storyboard */; };
 		E2D732C72561F989007F8F45 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732C62561F989007F8F45 /* ApiService.swift */; };
-		E2D732CB2561F9CC007F8F45 /* AllMessagesChildMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CA2561F9CC007F8F45 /* AllMessagesChildMessage.swift */; };
-		E2D732CE2561FB1C007F8F45 /* AllMessagesParentBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CD2561FB1C007F8F45 /* AllMessagesParentBody.swift */; };
+		E2D732CE2561FB1C007F8F45 /* DecodedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */; };
 		E2D732D12561FB79007F8F45 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D732D02561FB79007F8F45 /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,11 @@
 /* Begin PBXFileReference section */
 		E222DB7A25630BCF00EF7770 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		E222DB7D2563170800EF7770 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
+		E22E05252565836E0060CEC0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E22E05292565854A0060CEC0 /* UserSearchMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchMessage.swift; sourceTree = "<group>"; };
+		E22E052D256586E30060CEC0 /* AllMessagesResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMessagesResponseBody.swift; sourceTree = "<group>"; };
+		E22E0531256587B50060CEC0 /* UserSearchMessageBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchMessageBody.swift; sourceTree = "<group>"; };
+		E22E05392565883D0060CEC0 /* DecodedUserMessageArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedUserMessageArray.swift; sourceTree = "<group>"; };
 		E26CA0F12562FA0B007F565A /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		E2B4BEF525648E9900D50453 /* MessagerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessagerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B4BEF725648E9900D50453 /* MessagerTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerTestTests.swift; sourceTree = "<group>"; };
@@ -51,8 +60,7 @@
 		E2D732B82561F911007F8F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2D732BA2561F911007F8F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2D732C62561F989007F8F45 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		E2D732CA2561F9CC007F8F45 /* AllMessagesChildMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMessagesChildMessage.swift; sourceTree = "<group>"; };
-		E2D732CD2561FB1C007F8F45 /* AllMessagesParentBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMessagesParentBody.swift; sourceTree = "<group>"; };
+		E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedArray.swift; sourceTree = "<group>"; };
 		E2D732D02561FB79007F8F45 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +137,12 @@
 		E2D732C12561F929007F8F45 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E2D732CA2561F9CC007F8F45 /* AllMessagesChildMessage.swift */,
-				E2D732CD2561FB1C007F8F45 /* AllMessagesParentBody.swift */,
+				E2D732CD2561FB1C007F8F45 /* DecodedArray.swift */,
+				E22E05252565836E0060CEC0 /* Message.swift */,
+				E22E05292565854A0060CEC0 /* UserSearchMessage.swift */,
+				E22E052D256586E30060CEC0 /* AllMessagesResponseBody.swift */,
+				E22E0531256587B50060CEC0 /* UserSearchMessageBody.swift */,
+				E22E05392565883D0060CEC0 /* DecodedUserMessageArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,15 +291,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22E052A2565854A0060CEC0 /* UserSearchMessage.swift in Sources */,
 				E2D732B12561F910007F8F45 /* MessagesViewController.swift in Sources */,
-				E2D732CE2561FB1C007F8F45 /* AllMessagesParentBody.swift in Sources */,
+				E22E052E256586E30060CEC0 /* AllMessagesResponseBody.swift in Sources */,
+				E22E053A2565883D0060CEC0 /* DecodedUserMessageArray.swift in Sources */,
+				E2D732CE2561FB1C007F8F45 /* DecodedArray.swift in Sources */,
 				E26CA0F22562FA0B007F565A /* MessageTableViewCell.swift in Sources */,
 				E2D732AD2561F910007F8F45 /* AppDelegate.swift in Sources */,
 				E2B4BF032564931900D50453 /* ErrorHandler.swift in Sources */,
-				E2D732CB2561F9CC007F8F45 /* AllMessagesChildMessage.swift in Sources */,
 				E2D732D12561FB79007F8F45 /* MessageViewModel.swift in Sources */,
 				E222DB7B25630BCF00EF7770 /* MessageDetailViewController.swift in Sources */,
+				E22E0532256587B50060CEC0 /* UserSearchMessageBody.swift in Sources */,
 				E2D732C72561F989007F8F45 /* ApiService.swift in Sources */,
+				E22E05262565836E0060CEC0 /* Message.swift in Sources */,
 				E222DB7E2563170800EF7770 /* CreateMessageViewController.swift in Sources */,
 				E2D732AF2561F910007F8F45 /* SceneDelegate.swift in Sources */,
 			);
