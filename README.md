@@ -30,4 +30,4 @@ At any time the user can and may pull down on the table view to clear the search
 * The fetch by the user could also be (FIX) fixed by caching locally and then filtering by the user. Would have to make sure you have the latest data. 
 
 ## Testing plan
-Adhering to MVVM will assure the view models may be unit tested and at scale, this would help with test-driven development. 
+Adhering to MVVM will assure the view models may be unit tested and at scale, this would help with test-driven development. UI tests could be implemented if UI becomes more complex (not necessary now).
