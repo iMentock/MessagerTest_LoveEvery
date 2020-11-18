@@ -25,8 +25,14 @@ class CreateMessageViewController: UIViewController {
     
         // Set delegate(s)
         messageBodyTextView.delegate = self
+        usernameTextField.delegate = self
+        subjectTextField.delegate = self
         
         configureUI()
+    
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     // MARK: Helpers
@@ -39,6 +45,10 @@ class CreateMessageViewController: UIViewController {
         // Configure text fields to comply with UX
         usernameTextField.borderStyle = .none
         subjectTextField.borderStyle = .none
+        
+        // Keep behaviour of placeholder but change color
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: "Your username", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        subjectTextField.attributedPlaceholder = NSAttributedString(string: "Subject of message", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     }
     
     @objc private func sendButtonPressed() {
@@ -106,7 +116,7 @@ extension CreateMessageViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         placeHolder = textView.text ?? ""
         textView.text = ""
-        textView.textColor = UIColor.black
+        textView.textColor = #colorLiteral(red: 0.3494816422, green: 0.3450542688, blue: 0.3407886624, alpha: 1)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -115,4 +125,23 @@ extension CreateMessageViewController: UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
+    
+}
+
+// MARK: - Text Field
+extension CreateMessageViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        if textField == usernameTextField {
+            subjectTextField.becomeFirstResponder()
+        }
+        
+        if textField == subjectTextField {
+            messageBodyTextView.becomeFirstResponder()
+        }
+        
+        return true
+    }
+
 }

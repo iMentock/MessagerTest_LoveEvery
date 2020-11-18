@@ -28,6 +28,10 @@ class MessagesViewController: UIViewController {
         
         configureUI()
         configureRefreshAction()
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +54,7 @@ class MessagesViewController: UIViewController {
         searchBar.backgroundImage = UIImage()
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = #colorLiteral(red: 0.9971526265, green: 0.9834153056, blue: 0.9434879422, alpha: 1)
+            textfield.textColor = #colorLiteral(red: 0.3494816422, green: 0.3450542688, blue: 0.3407886624, alpha: 1)
         }
     }
     
@@ -57,7 +62,7 @@ class MessagesViewController: UIViewController {
         // Allow user to pull down to refresh
         refreshControl.addTarget(self, action: #selector(loadAllMessagesData), for: .valueChanged)
         refreshControl.tintColor = #colorLiteral(red: 0.3261150122, green: 0.8584199548, blue: 0.8048429489, alpha: 1)
-        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Messages...")
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching messages...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(cgColor: #colorLiteral(red: 0.3494816422, green: 0.3450542688, blue: 0.3407886624, alpha: 1))])
         if #available(iOS 10.0, *) {
             messagesTableView.refreshControl = refreshControl
         } else {
@@ -80,8 +85,7 @@ class MessagesViewController: UIViewController {
                 self?.messagesTableView.reloadData()
                 self?.refreshControl.endRefreshing()
             }
-            
-            
+        
         }
     }
     
@@ -102,7 +106,6 @@ class MessagesViewController: UIViewController {
                 self?.messagesTableView.reloadData()
                 self?.refreshControl.endRefreshing()
             }
-            
            
         }
     }
@@ -144,6 +147,7 @@ extension MessagesViewController: UISearchBarDelegate {
         if searchBarText.count < 1 {
             return
         }
+        searchBar.resignFirstResponder()
         loadMessageData(forUser: searchBarText)
     }
     

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// The child message object
 struct Message: Decodable {
     
     let subject: String
