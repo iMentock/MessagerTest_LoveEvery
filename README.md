@@ -13,7 +13,7 @@ To demonstrate Swift and iOS experience. Completing objectives given by design d
 Was given one week with the project. I finished the objectives a bit early so added some UI/UX elements. Had a lot of fun as well!
 
 # Design
-Using MVVM architecture created a series of 3 Views that accomplish given requirements. The ViewModel file and separation of services allows for 
+Using MVVM architecture created a series of Views, a View Model, and Models that accomplish given requirements. The ViewModel file and separation of services allows for 
 unit-testing of API calls with the knowledge that the views will be updated according to the view model. 
 
 The table view is appropriate to display the list of similar messages and the detail view give a clear look at the information given in each of 
